@@ -39,19 +39,6 @@
 - **switch**：open / closed → 1 / 0  
   <!-- 想象一个控制灯泡的开关：开=有电流=灯亮；关=无电流=灯灭；开和关可代表 1 和 0 -->
 
-#### 3-bit 决策树（类比）
-
-```text
-                       ---| 1
-                   | 1 ---| 0
-            | 1 ---|   ---| 1
-            |      | 0 ---| 0
-        ---        
-            |      | 1 ---| 1
-            | 0 ---|   ---| 0
-                   | 0 ---| 1
-                       ---| 0
-```
 
 - 3 个开关（3 bits）一共有：  
   `000 001 010 011 100 101 110 111` → **2^3 个组合**
@@ -82,35 +69,10 @@
 2. Multiply result by 52  
 3. Output result on screen  
 
-- 需要三个层级（直觉版）：  
+- 需要三个层级：  
   **白话（Human-readable） → 汇编（Assembly） → 机器码（0/1, Machine language）**
 
 <!-- 这里的重点是：计算机本身不理解中文/英文句子，它只执行“被编码后的指令” -->
-
----
-
-### e) 计算机指令（Instruction）示例：像“配方一样”的操作
-
-- 数据和指令都在 memory 里  
-- 当我们要做计算时，通常要：从 memory 取数据 → 做运算 → 把结果写回 memory
-
-**指令格式（类汇编，示意）：**
-- `Add X, #num, Y`：把内存地址 `X` 的数据与数字 `num` 相加，结果存到 `Y`
-- `Sub X, #num, Y`：用内存地址 `X` 的数据减去 `num`，结果存到 `Y`
-- `Mul X, #num, Y`：把内存地址 `X` 的数据乘以 `num`，结果存到 `Y`
-- `Div X, #num, Y`：把内存地址 `X` 的数据除以 `num`，结果存到 `Y`
-- `Jmp Z`：告诉处理器下一条指令在内存地址 `Z`
-
-**小练习（按顺序执行）：**
-1. `Mul 97, #9, 98`
-2. `Div 98, #5, 98`
-3. `Add 98, #32, 99`
-
-- 教材动画：
-  - **1.2.3 Memory stores instructions and data as 0s and 1s**
-  - **1.2.4 Processor executing instructions**
-
-<!-- 这一段你可以强调：地址 X/Y/Z 可以理解成“柜子编号”；柜子里放的是数据或指令 -->
 
 ---
 
@@ -203,32 +165,6 @@ public class Main {
 }
 ```
 
-### Basic input（Scanner）
-
-- 很多程序会需要输入值，这里需要引入工具：**Scanner**
-- 固定参考格式：
-```java
-import java.util.Scanner;
-
-int wage;
-Scanner scnr = new Scanner(System.in);
-wage = scnr.nextInt();
-```
-
-**例子：询问你的身高（参考格式）**
-```java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        int height;
-        Scanner scnr = new Scanner(System.in);
-
-        // to do:
-    }
-}
-```
-
 ---
 
 ## 1.10 Comments and whitespace
@@ -279,11 +215,16 @@ public class Main {
 
 ## 1.13 Problem solving（计算机思维）
 
-- 一位组织者希望一个 **64 人会议**的开始，让每个人依次互相问候 **30 秒**。  
-- 请指出该方案是否能在不占用过多时间的情况下达到目的。
+None
 
 ---
 
 ## 1.14 Why programming
 
-## 1.15 Language history
+- None
+
+---
+
+## 1.15 Language histor
+
+- None
