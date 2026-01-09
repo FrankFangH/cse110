@@ -263,15 +263,7 @@ System.out.println(avg);         // 90.0
 
 ---
 
-### d) 命名规则（Naming conventions）
-- Java 常用：**lowerCamelCase（小驼峰）**
-  - ✅ `totalPrice`, `studentCount`, `taxRate`
-  - 尽量别用：`a`, `b`（除非数学推导或临时变量）
-- 名字要表达含义：`taxRate` 比 `t` 更好
-
----
-
-### e) 修改变量的值（Update a variable）
+### d) 修改变量的值（Update a variable）
 
 ~~~java
 public class Main {
