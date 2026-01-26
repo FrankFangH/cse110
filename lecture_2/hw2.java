@@ -10,25 +10,26 @@ public class hw2 {
         int c = -7;
         double d = 2.5;
 
-        System.out.println(a - b * 2 + c);
-        System.out.println((a - b) * (2 + c));
+        System.out.println(a - b * 2 + c);     // -6
+        System.out.println((a - b) * (2 + c)); // 25
 
-        System.out.println(c / b);
-        System.out.println(c % b);
+        System.out.println(c / b); // -1
+        System.out.println(c % b); // -3
 
-        System.out.println(a / b * b);
-        System.out.println(a * b / b);
+        System.out.println(a / b * b); // 8
+        System.out.println(a * b / b); // 9
 
-        System.out.println((double)a / b);
-        System.out.println((int)(d * b) / a);
-        System.out.println((int)(d * (b / a)));
+        System.out.println((double)a / b); // 2.25
+        System.out.println((int)(d * b) / a); // 1
+        System.out.println((int)(d * (b / a))); // 0
+ 
+        System.out.println(a + b + "X" + c); // 94X-7
+        System.out.println("X" + a + b + c); // X94-7
+        System.out.println("X" + (a + b) + c); // X13-7
+        System.out.println("Line1\t" + a + "\nLine2\t" + b); // Line1   9
+                                                             // Line2   4
 
-        System.out.println(a + b + "X" + c);
-        System.out.println("X" + a + b + c);
-        System.out.println("X" + (a + b) + c);
-        System.out.println("Line1\t" + a + "\nLine2\t" + b);
-
-        System.out.println("He said: \"" + a + "\"");
+        System.out.println("He said: \"" + a + "\""); // He said: "9"
 
         System.out.println(a > b && b > 0);
         System.out.println(!(a > b) || (c < 0 && b == 4));
@@ -49,6 +50,13 @@ public class hw2 {
         //
         // 关键点：
         // 1) discount 是百分比，需要转成小数（例如 25 -> 0.25）
+
+        double price = scan.nextDouble();
+        int discount = scan.nextInt();
+
+        double percent = ((double) discount) / 100;
+
+        System.out.println(price * (1 - percent));
 
         // 在这里写你的回答：
 
@@ -85,5 +93,24 @@ public class hw2 {
         // =========================================================
         
         // 在这里写你的回答：
+        int total_dollars = scan.nextInt();
+        int total_cents = scan.nextInt();
+        int remain;
+        
+        int cents = total_dollars * 100 + total_cents;
+        int dollar = cents / 100;
+        remain = cents % 100;
+
+        int quarters = remain / 25;
+        remain = remain % 25;
+
+        int dimes = remain / 10;
+        remain = remain % 10;
+
+        int nickels = remain / 5;
+        remain = remain % 5;
+
+        System.out.println("you have " + dollar + " dollars " + quarters + " quarters " + dimes + " dimes "
+                           + nickels + " nickels " + remain + " remain");
     }
 }
